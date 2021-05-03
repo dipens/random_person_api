@@ -1,0 +1,1 @@
+This package makes a call to https://randomuser.me/api/ to generate a random person and gives the output in console or external json file.
