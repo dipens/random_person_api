@@ -1,8 +1,6 @@
 import make_request_call
 from Person import Person
 from PrintOption import PrintOption
-import constant
-import json
 import sys
 
 def random_person_api():
