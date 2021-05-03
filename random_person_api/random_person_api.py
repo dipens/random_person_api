@@ -9,7 +9,9 @@ def random_person_api():
         with open(sys.argv[2]+'.json', 'w') as outfile:
             json.dump(data, outfile)
     elif sys.argv[1] == 'create':
-        print(json.dumps(data, indent=4, sort_keys=True))
+        jsonData = data
+        print(jsonData['results'][0]['name']['first'] + " " + jsonData['results'][0]['name']['last'])
+        #print(json.dumps(data, indent=4, sort_keys=True))
     else:
         print("ERR: Please specify the correct arguments")
 
