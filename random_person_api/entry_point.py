@@ -1,16 +1,22 @@
-from person_with_nationality import person_with_nationality
-from person_with_gender import person_with_gender
-from person import person
-from print_option import print_option
+from PersonWithNationality import PersonWithNationality
+from PersonWithGender import PersonWithGender
+from Person import Person
+from PrintOption import PrintOption
 import sys
 
 def entry_point():
     if sys.argv[1] == 'create':
-        random_person = person()
+        person = Person()
+        person.get_person()
+        random_person = person
     elif sys.argv[1] == 'create_random_nationality':
-        random_person = person_with_nationality()
+        person = PersonWithNationality()
+        person.get_person()
+        random_person = person
     elif sys.argv[1] == 'create_random_gender':
-        random_person = person_with_gender()
-    print_option.do_print(sys.argv, random_person)
+        person = PersonWithGender()
+        person.get_person()
+        random_person = person
+    PrintOption.do_print(sys.argv, random_person)
 
 entry_point()

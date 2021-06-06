@@ -3,11 +3,12 @@ from dataclasses import dataclass
 from typing import List
 
 @dataclass
-class print_option:
+class PrintOption:
     args: List[str]
     @staticmethod
     def do_print(args, person):
-        if (len(args) > 2) and args[1] == 'json':
+        print(len(args))
+        if (len(args) > 2):
             person.print_to_file(args[2])
         else:
             person.print_to_console()
