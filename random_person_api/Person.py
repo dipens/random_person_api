@@ -13,6 +13,5 @@ class Person:
     def print_to_console(self):
         print(json.dumps(self.random_person, indent=4, sort_keys=True))
     def print_to_file(self, file_name):
-        print('BBB')
         with open(file_name+'.json', 'w') as outfile:
             json.dump(self.random_person, outfile)
