@@ -1,14 +1,15 @@
 from dataclasses import dataclass
-#from Person import Person
 from typing import List
+import sqlite3
+
 
 @dataclass
 class PrintOption:
     args: List[str]
+
     @staticmethod
-    def do_print(args, person):
-        print(len(args))
-        if (len(args) > 2):
-            person.print_to_file(args[2])
+    def do_print(file, person):
+        if file is not None:
+            person.print_to_file(file)
         else:
             person.print_to_console()

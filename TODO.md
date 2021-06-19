@@ -6,13 +6,14 @@ Gender specific classes
 
 
 2021/05/31
-Refactor init methods to seperate i/o operations
-Change the name of the classes to follow camel case
+Refactor init methods to seperate i/o operations - Done
+Change the name of the classes to follow camel case - Done
 
 
 2021/06/08
 Using marshmellow, create a basic schema to save that person - validation
 create a sqlalchemy model to save it to sqlite db
 print and save to the db
-Use Python click
-Python black
+Use Python click - Done
+Python black - Done
+Move requirements.txt and setup.py outside of random_person_api - Done
