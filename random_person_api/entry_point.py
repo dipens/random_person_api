@@ -1,3 +1,4 @@
+from DBOperations import DBOperations
 from PersonWithNationality import PersonWithNationality
 from PersonWithGender import PersonWithGender
 from Person import Person
@@ -40,6 +41,8 @@ def entry_point(nation, gender, file):
         person = PersonWithGender()
         person.get_person(gender)
         random_person = person
+    db_operations = DBOperations()
+    db_operations.insert(random_person.random_person)
     PrintOption.do_print(file, random_person)
 
 

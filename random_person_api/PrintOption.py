@@ -12,4 +12,4 @@ class PrintOption:
         if file is not None:
             person.print_to_file(file)
         else:
-            person.print_to_console()
+            person.print_from_db()

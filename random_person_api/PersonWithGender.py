@@ -1,9 +1,10 @@
 from Person import Person
 import urllib.request
 import json
-import random
 import constant
 from PersonSchema import PersonSchema
+from DBOperations import DBOperations
+from sqlalchemy import *
 
 
 class PersonWithGender(Person):
@@ -14,7 +15,3 @@ class PersonWithGender(Person):
         self.random_person = json.loads(
             urllib.request.urlopen(constant.URL + "?gender=" + gender).read()
         )
-        for key in self.random_person['results'][0]:
-            setattr(self, key, self.random_person['results'][0][key])
-        schema = PersonSchema()
-        result = schema.dump(self)
