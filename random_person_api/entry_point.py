@@ -11,13 +11,13 @@ import constant
 @click.option(
     "--nation",
     prompt_required=False,
-    help="Create a person with the specified nationality. Options = AU,BR,CA,CH,DE,DK,ES,FI,FR,GB,IE,IR,NO,NL,NZ,TR,US",
+    help=f"Create a person with the specified nationality. Options = {constant.nation}",
     type=click.Choice(constant.nation, case_sensitive=False),
 )
 @click.option(
     "--gender",
     prompt_required=False,
-    help="Create a person with the specified gender. Options=male,female",
+    help=f"Create a person with the specified gender. Options = {constant.gender}",
     type=click.Choice(constant.gender, case_sensitive=False),
 )
 @click.option(

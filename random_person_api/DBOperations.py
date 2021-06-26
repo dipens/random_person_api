@@ -1,3 +1,4 @@
+from SessionManager import SessionManager
 from PersonSchema import PersonSchema
 from sqlalchemy import *
 import pprint
@@ -5,7 +6,7 @@ import pprint
 
 class DBOperations:
     def __init__(self):
-        self.engine = create_engine("sqlite:///example.db")
+        self.session = SessionManager().getSession()
         self.metadata = MetaData()
         self.person_table = Table(
             "person",
@@ -28,16 +29,15 @@ class DBOperations:
         pass
 
     def insert(self, random_person):
-        print(random_person)
         for key in random_person["results"][0]:
             setattr(self, key, random_person["results"][0][key])
         schema = PersonSchema()
         result = schema.dump(self)
-        self.metadata.create_all(self.engine)
         stmt = self.person_table.insert().values(result)
-        self.engine.execute(stmt)
+        result = self.session.execute(stmt)
+        self.session.commit()
 
     def print(self):
-        result = self.engine.execute(select(self.person_table))
+        result = self.session.execute(select(self.person_table))
         for row in result:
             pprint.pprint(row)

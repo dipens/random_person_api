@@ -17,3 +17,9 @@ print and save to the db
 Use Python click - Done
 Python black - Done
 Move requirements.txt and setup.py outside of random_person_api - Done
+
+
+
+2021/06/21
+Use session manager in SQL Alchemy
+Abstract creation of session and engine outside of DB Operations
