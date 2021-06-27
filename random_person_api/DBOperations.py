@@ -6,7 +6,7 @@ import pprint
 
 class DBOperations:
     def __init__(self):
-        self.session = SessionManager().getSession()
+        self.session = SessionManager().get_session()
         self.metadata = MetaData()
         self.person_table = Table(
             "person",
