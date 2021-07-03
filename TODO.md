@@ -23,3 +23,7 @@ Move requirements.txt and setup.py outside of random_person_api - Done
 2021/06/21
 Use session manager in SQL Alchemy
 Abstract creation of session and engine outside of DB Operations
+
+
+2021/06/28
+Change the SessionManager class, move engine and session in init, initialize the session in init and use engine and session as seperate propeties.
