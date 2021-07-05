@@ -27,3 +27,8 @@ Abstract creation of session and engine outside of DB Operations
 
 2021/06/28
 Change the SessionManager class, move engine and session in init, initialize the session in init and use engine and session as seperate propeties.
+
+
+2021/07/05
+Organize the files into python packages.
+Convert a part of the application to flask.
