@@ -1,1 +1,42 @@
-{"results": [{"gender": "female", "name": {"title": "Miss", "first": "Meral", "last": "Aclan"}, "location": {"street": {"number": 1501, "name": "\u015eehitler Cd"}, "city": "Adana", "state": "Bayburt", "country": "Turkey", "postcode": 51281, "coordinates": {"latitude": "71.9829", "longitude": "51.8734"}, "timezone": {"offset": "+5:30", "description": "Bombay, Calcutta, Madras, New Delhi"}}, "email": "meral.aclan@example.com", "login": {"uuid": "03b250d7-5f05-4ba5-8b60-2eb67cf3b7ba", "username": "happybird222", "password": "rainman", "salt": "u0dxUQtp", "md5": "9860f0280417cf559146ab0bc8cee654", "sha1": "bd22a10b38ba405d8a7579134f851e91f2504291", "sha256": "cd71c674cfad6a8799639f9d8bec22ae6c214e875f351f419643e260141f0842"}, "dob": {"date": "1994-11-06T10:53:19.249Z", "age": 27}, "registered": {"date": "2014-08-03T23:22:28.138Z", "age": 7}, "phone": "(479)-274-7678", "cell": "(608)-985-9843", "id": {"name": "", "value": null}, "picture": {"large": "https://randomuser.me/api/portraits/women/38.jpg", "medium": "https://randomuser.me/api/portraits/med/women/38.jpg", "thumbnail": "https://randomuser.me/api/portraits/thumb/women/38.jpg"}, "nat": "TR"}], "info": {"seed": "140a9b2625c62fce", "results": 1, "page": 1, "version": "1.3"}}
+{
+    "results": [
+        {
+            "gender": "female",
+            "name": {"title": "Miss", "first": "Meral", "last": "Aclan"},
+            "location": {
+                "street": {"number": 1501, "name": "\u015eehitler Cd"},
+                "city": "Adana",
+                "state": "Bayburt",
+                "country": "Turkey",
+                "postcode": 51281,
+                "coordinates": {"latitude": "71.9829", "longitude": "51.8734"},
+                "timezone": {
+                    "offset": "+5:30",
+                    "description": "Bombay, Calcutta, Madras, New Delhi",
+                },
+            },
+            "email": "meral.aclan@example.com",
+            "login": {
+                "uuid": "03b250d7-5f05-4ba5-8b60-2eb67cf3b7ba",
+                "username": "happybird222",
+                "password": "rainman",
+                "salt": "u0dxUQtp",
+                "md5": "9860f0280417cf559146ab0bc8cee654",
+                "sha1": "bd22a10b38ba405d8a7579134f851e91f2504291",
+                "sha256": "cd71c674cfad6a8799639f9d8bec22ae6c214e875f351f419643e260141f0842",
+            },
+            "dob": {"date": "1994-11-06T10:53:19.249Z", "age": 27},
+            "registered": {"date": "2014-08-03T23:22:28.138Z", "age": 7},
+            "phone": "(479)-274-7678",
+            "cell": "(608)-985-9843",
+            "id": {"name": "", "value": null},
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/38.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/38.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/38.jpg",
+            },
+            "nat": "TR",
+        }
+    ],
+    "info": {"seed": "140a9b2625c62fce", "results": 1, "page": 1, "version": "1.3"},
+}

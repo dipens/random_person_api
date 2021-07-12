@@ -44,4 +44,6 @@ class DBOperations:
             pprint.pprint(row)
 
     def print_all(self):
-        return json.dumps([ row._asdict() for row in self.session.execute(select(self.person_table)) ])
+        return json.dumps(
+            [row._asdict() for row in self.session.execute(select(self.person_table))]
+        )
