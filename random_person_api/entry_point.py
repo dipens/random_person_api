@@ -1,24 +1,24 @@
-from DBOperations import DBOperations
-from PersonWithNationality import PersonWithNationality
-from PersonWithGender import PersonWithGender
-from Person import Person
+from persistence.DBOperations import DBOperations
+from models.PersonWithNationality import PersonWithNationality
+from models.PersonWithGender import PersonWithGender
+from models.Person import Person
 from PrintOption import PrintOption
 import click
-import constant
+from constants.constant import constant
 
 
 @click.command()
 @click.option(
     "--nation",
     prompt_required=False,
-    help=f"Create a person with the specified nationality. Options = {constant.nation}",
-    type=click.Choice(constant.nation, case_sensitive=False),
+    help=f"Create a person with the specified nationality. Options = {constant.get('nation')}",
+    type=click.Choice(constant.get("nation"), case_sensitive=False),
 )
 @click.option(
     "--gender",
     prompt_required=False,
-    help=f"Create a person with the specified gender. Options = {constant.gender}",
-    type=click.Choice(constant.gender, case_sensitive=False),
+    help=f"Create a person with the specified gender. Options = {constant.get('gender')}",
+    type=click.Choice(constant.get("gender"), case_sensitive=False),
 )
 @click.option(
     "--file",

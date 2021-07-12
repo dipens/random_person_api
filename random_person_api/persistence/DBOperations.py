@@ -1,5 +1,5 @@
-from SessionManager import SessionManager
-from PersonSchema import PersonSchema
+from persistence.SessionManager import SessionManager
+from persistence.PersonSchema import PersonSchema
 from sqlalchemy import *
 import pprint
 

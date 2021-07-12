@@ -1,16 +1,16 @@
 from dataclasses import dataclass
-from PersonSchema import PersonSchema
+from persistence.PersonSchema import PersonSchema
 from typing import List
 import urllib.request
 import json
-import constant
+from constants.constant import constant
 from sqlalchemy import Column, case
 from sqlalchemy.types import (
     JSON,
     Unicode,
     Integer,
 )
-from DBOperations import DBOperations
+from persistence.DBOperations import DBOperations
 
 
 @dataclass
@@ -34,7 +34,9 @@ class Person:
         pass
 
     def get_person(self):
-        self.random_person = json.loads(urllib.request.urlopen(constant.URL).read())
+        self.random_person = json.loads(
+            urllib.request.urlopen(constant.get("URL")).read()
+        )
 
     def print_from_db(self):
         db_operations = DBOperations()
