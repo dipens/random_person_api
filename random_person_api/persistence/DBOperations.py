@@ -2,6 +2,7 @@ from persistence.SessionManager import SessionManager
 from persistence.PersonSchema import PersonSchema
 from sqlalchemy import *
 import pprint
+import json
 
 
 class DBOperations:
@@ -41,3 +42,6 @@ class DBOperations:
         result = self.session.execute(select(self.person_table))
         for row in result:
             pprint.pprint(row)
+
+    def print_all(self):
+        return json.dumps([ row._asdict() for row in self.session.execute(select(self.person_table)) ])
