@@ -32,3 +32,9 @@ Change the SessionManager class, move engine and session in init, initialize the
 2021/07/05
 Organize the files into python packages.
 Convert a part of the application to flask.
+
+
+2021/07/28
+Move the schemas in schema folder - Done
+CRUD operations on the app - 
+Flask restful api - 

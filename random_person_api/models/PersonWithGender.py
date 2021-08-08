@@ -2,7 +2,7 @@ from models.Person import Person
 import urllib.request
 import json
 from constants.constant import constant
-from persistence.PersonSchema import PersonSchema
+from schemas.PersonSchema import PersonSchema
 from persistence.DBOperations import DBOperations
 from sqlalchemy import *
 

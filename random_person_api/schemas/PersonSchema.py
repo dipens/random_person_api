@@ -1,8 +1,9 @@
+from flask import jsonify
 from marshmallow import Schema, fields
 
 
 class PersonSchema(Schema):
-    name = fields.Str()
+    name = fields.Dict()
     email = fields.Email()
     nat = fields.Str()
     gender = fields.Str()

@@ -1,8 +1,9 @@
 from persistence.SessionManager import SessionManager
-from persistence.PersonSchema import PersonSchema
+from schemas.PersonSchema import PersonSchema
 from sqlalchemy import *
 import pprint
 import json
+from flask import jsonify
 
 
 class DBOperations:
@@ -37,11 +38,21 @@ class DBOperations:
         stmt = self.person_table.insert().values(result)
         result = self.session.execute(stmt)
         self.session.commit()
+        return result.inserted_primary_key[0]
 
     def print(self):
         result = self.session.execute(select(self.person_table))
         for row in result:
             pprint.pprint(row)
+
+    def print_by_id(self, id):
+        result = self.session.execute(select(self.person_table).where(self.person_table.columns.get('PK') == id)).first()
+        return json.dumps(result._asdict())
+    
+    def delete_by_id(self, id):
+        result = self.session.execute(delete(self.person_table).where(self.person_table.columns.get('PK') == id))
+        self.session.commit()
+        return result.rowcount
 
     def print_all(self):
         return json.dumps(

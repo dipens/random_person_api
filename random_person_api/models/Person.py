@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from persistence.PersonSchema import PersonSchema
+from schemas.PersonSchema import PersonSchema
 from typing import List
 import urllib.request
 import json
@@ -41,6 +41,10 @@ class Person:
     def print_from_db(self):
         db_operations = DBOperations()
         db_operations.print()
+
+    def print_person_by_id(self, id):
+        db_operations = DBOperations()
+        db_operations.print_by_id(id)
 
     def print_to_file(self, file_name):
         with open(file_name + ".json", "w") as outfile:
