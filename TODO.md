@@ -38,3 +38,10 @@ Convert a part of the application to flask.
 Move the schemas in schema folder - Done
 CRUD operations on the app - 
 Flask restful api - 
+
+
+2021/08/09
+Use Marshmallow to dump schema - Not done
+Create a virtual env and install the packages - Done
+Create a new poetry package - Not done
+pip install using the wheel file - Not done

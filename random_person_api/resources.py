@@ -15,7 +15,7 @@ app.config['DEBUG'] = True
 #ma = Marshmallow(app) 
 #app.config
 
-person_schema = PersonSchema()
+
 
 # Create a Person
 @app.route("/person", methods=["GET"])
@@ -26,6 +26,9 @@ def add_product():
     db_operations = DBOperations()
     id = db_operations.insert(random_person.random_person)
     result = db_operations.print_by_id(id)
+    person_schema = PersonSchema()
+    mm = person_schema.dump(person)
+    pprint.pprint(mm)
     r = make_response(result)
     r.mimetype = "application/json"
     return r

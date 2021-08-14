@@ -1,0 +1,21 @@
+
+[tool.poetry]
+name = "random_person_api"
+version = "0.1.0"
+description = ""
+authors = ["Dipen Shah <dipenmshah8@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flask = "2.0.1"
+requests = "^2.26.0"
+setuptools = "^57.4.0"
+click = "^8.0.1"
+SQLAlchemy = "1.4.22"
+marshmallow = "3.13.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
