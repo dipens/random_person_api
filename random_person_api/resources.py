@@ -26,15 +26,16 @@ def add_product():
     db_operations = DBOperations()
     id = db_operations.insert(random_person.random_person)
     result = db_operations.print_by_id(id)
+    #pprint.pprint(result)
     person_schema = PersonSchema()
-    mm = person_schema.dump(person)
+    mm = person_schema.dump(result)
     pprint.pprint(mm)
-    r = make_response(result)
+    r = make_response(mm)
     r.mimetype = "application/json"
     return r
 
 
-@app.route("/get")
+@app.route("/persons")
 def get_persons():
     db_operations = DBOperations()
     r = make_response(db_operations.print_all())

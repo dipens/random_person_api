@@ -15,4 +15,4 @@ class PersonSchema(Schema):
     location = fields.Str()
     id = fields.Str()
     email = fields.Str()
-    dob = fields.Str()
+    dob = fields.Dict()

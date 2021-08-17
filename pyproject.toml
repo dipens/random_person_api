@@ -6,7 +6,7 @@ description = ""
 authors = ["Dipen Shah <dipenmshah8@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 flask = "2.0.1"
 requests = "^2.26.0"
 setuptools = "^57.4.0"

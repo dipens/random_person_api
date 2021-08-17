@@ -47,7 +47,7 @@ class DBOperations:
 
     def print_by_id(self, id):
         result = self.session.execute(select(self.person_table).where(self.person_table.columns.get('PK') == id)).first()
-        return json.dumps(result._asdict())
+        return result#json.dumps(result._asdict())
     
     def delete_by_id(self, id):
         result = self.session.execute(delete(self.person_table).where(self.person_table.columns.get('PK') == id))
