@@ -46,11 +46,15 @@ class DBOperations:
             pprint.pprint(row)
 
     def print_by_id(self, id):
-        result = self.session.execute(select(self.person_table).where(self.person_table.columns.get('PK') == id)).first()
-        return result#json.dumps(result._asdict())
-    
+        result = self.session.execute(
+            select(self.person_table).where(self.person_table.columns.get("PK") == id)
+        ).first()
+        return result  # json.dumps(result._asdict())
+
     def delete_by_id(self, id):
-        result = self.session.execute(delete(self.person_table).where(self.person_table.columns.get('PK') == id))
+        result = self.session.execute(
+            delete(self.person_table).where(self.person_table.columns.get("PK") == id)
+        )
         self.session.commit()
         return result.rowcount
 
@@ -58,3 +62,6 @@ class DBOperations:
         return json.dumps(
             [row._asdict() for row in self.session.execute(select(self.person_table))]
         )
+
+    def get_session(self):
+        return self.session

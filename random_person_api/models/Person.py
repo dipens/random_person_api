@@ -11,10 +11,13 @@ from sqlalchemy.types import (
     Integer,
 )
 from persistence.DBOperations import DBOperations
+from sqlalchemy.orm import declarative_base
+
+Base = declarative_base()
 
 
 @dataclass
-class Person:
+class Person(Base):
     __tablename__ = "person"
     PK = Column(Integer, primary_key=True)
     name = Column(JSON)
